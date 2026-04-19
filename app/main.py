@@ -1,9 +1,14 @@
 import argparse
+import sys
 from tabulate import tabulate
 
 from app.reader import read_csv_files
 from app.reports.registry import get_report
 from app.exceptions import AppError
+
+
+# Поддержка кириллицы
+sys.stdout.reconfigure(encoding = "utf-8")
 
 
 def parse_args():
